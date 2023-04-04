@@ -59,11 +59,12 @@ class _Details4ScreenState extends State<Details4Screen> {
                                   child: Text(
                                     value,
                                     style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 20,
-                                        color: selectIndex == index
-                                            ? AppColor.kPrimaryPik
-                                            : AppColor.kText),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 20,
+                                      color: selectIndex == index
+                                          ? AppColor.kPrimaryPik
+                                          : AppColor.kText,
+                                    ),
                                   ),
                                 ),
                               ),
