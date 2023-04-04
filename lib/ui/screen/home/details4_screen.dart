@@ -44,32 +44,34 @@ class _Details4ScreenState extends State<Details4Screen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: list
                       .asMap()
-                      .map((index, value) => MapEntry(
-                            index,
-                            GestureDetector(
-                              onTap: () {
-                                selectIndex = index;
-                                setState(() {});
-                              },
-                              child: Container(
-                                height: 40,
-                                width: 80,
-                                color: Colors.transparent,
-                                child: Center(
-                                  child: Text(
-                                    value,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 20,
-                                      color: selectIndex == index
-                                          ? AppColor.kPrimaryPik
-                                          : AppColor.kText,
-                                    ),
+                      .map(
+                        (index, value) => MapEntry(
+                          index,
+                          GestureDetector(
+                            onTap: () {
+                              selectIndex = index;
+                              setState(() {});
+                            },
+                            child: Container(
+                              height: 40,
+                              width: 80,
+                              color: Colors.transparent,
+                              child: Center(
+                                child: Text(
+                                  value,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 20,
+                                    color: selectIndex == index
+                                        ? AppColor.kPrimaryPik
+                                        : AppColor.kText,
                                   ),
                                 ),
                               ),
                             ),
-                          ))
+                          ),
+                        ),
+                      )
                       .values
                       .toList(),
                 ),
